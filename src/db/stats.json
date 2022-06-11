@@ -1,0 +1,76 @@
+{
+  "actual": {
+    "commands": {
+      "total": 78,
+      "details": {
+        "help": 17,
+        "command": 1,
+        "stats": 2,
+        "interrupt": 35,
+        "info": 23
+      }
+    }
+  },
+  "daily": [
+    {
+      "date": "08-06-2022",
+      "guilds": 0,
+      "users": 1,
+      "activeUsers": 1,
+      "commands": {
+        "total": 0,
+        "details": {
+          "help": 1
+        }
+      }
+    },
+    {
+      "date": "09-06-2022",
+      "guilds": 1,
+      "users": 1,
+      "activeUsers": 2,
+      "commands": {
+        "total": 36,
+        "details": {
+          "help": 13,
+          "command": 1,
+          "stats": 2,
+          "interrupt": 21,
+          "info": 9
+        }
+      }
+    },
+    {
+      "date": "09-06-2022",
+      "guilds": 1,
+      "users": 2,
+      "activeUsers": 2,
+      "commands": {
+        "total": 62,
+        "details": {
+          "help": 17,
+          "command": 1,
+          "stats": 2,
+          "interrupt": 35,
+          "info": 23
+        }
+      }
+    },
+    {
+      "date": "10-06-2022",
+      "guilds": 2,
+      "users": 6,
+      "activeUsers": 2,
+      "commands": {
+        "total": 75,
+        "details": {
+          "help": 17,
+          "command": 1,
+          "stats": 2,
+          "interrupt": 35,
+          "info": 23
+        }
+      }
+    }
+  ]
+}

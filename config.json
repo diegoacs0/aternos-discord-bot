@@ -1,0 +1,39 @@
+{
+  "__templateVersion": "1.1.1",
+  "prefix": "2",
+  "description": "",
+  "language": "en",
+  "owner": "123456",
+  "devs": [],
+  "colors": {
+    "default": "fff"
+  },
+  "evalName": "bot",
+  "startingConsoleDetailed": true,
+  "backup": {
+    "enabled": false,
+    "channel": "",
+    "ignoredPaths": [
+      "node_modules",
+      "package-lock.json",
+      ".git"
+    ]
+  },
+  "activities": [
+    {
+      "text": "Assistindo os rapazes",
+      "type": "PLAYING"
+    },
+    {
+      "text": "Minecraft",
+      "type": "STREAMING"
+    }
+  ],
+  "channels": {
+    "logs": {
+      "commands": null,
+      "guildCreate": null,
+      "guildDelete": null
+    }
+  }
+}
