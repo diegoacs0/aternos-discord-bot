@@ -32,11 +32,11 @@ A simple discord bot made to turn your aternos server on/off and also see your s
 
  5. Install dependencies
  <br>
-`npm run setup`
+``npm run setup``
  
  6. Start the bot
  <br>
-`node .`
+``node .``
     
 ## Author
 
