@@ -1,5 +1,3 @@
-const credentials = require('../../../../.credentials.json');
-
 import { python } from 'pythonia';
 const { Client, atserver } = await python('python_aternos');
 
@@ -13,7 +11,7 @@ function getRandomArbitrary(min, max) {
 
 async function load() {
   try {
-  aternos = await Client.from_credentials(credentials.aternos_user, credentials.aternos_password);
+  aternos = await Client.from_credentials('mrdc_', 'dsrs2013');
   } catch (e) {
     console.log(e);
     return new Promise((resolve, reject) => {
@@ -29,19 +27,25 @@ async function load() {
 }
 
 export async function srv_info() {
-  await load();
+  if (typeof srv !== 'undefined') await srv.fetch();
+  if (typeof srv == 'undefined') await load();
+
   return {
     "domain": await srv.domain,
     "motd": await srv.motd,
     "name": await srv.subdomain,
     "version": await srv.version,
     "type": await srv.edition,
-    "status": await srv.status
+    "status": await srv.status,
+    "players_count": await srv.players_count,
+    "slots": await srv.slots
   }
 }
 
 export async function interrupt(state) {
-  await load();
+  if (typeof srv !== 'undefined') await srv.fetch();
+  if (typeof srv == 'undefined') await load();
+
   if (typeof state == 'undefined') {
     let status = await srv_info();
     status = status.status;
@@ -61,6 +65,7 @@ export async function interrupt(state) {
   
   try {
     if (state == 1) {
+      await srv.eula();
       res = await srv.start();
 	  typeRes = "Ligando Servidor...";
     } else if (state == 0) {
@@ -81,6 +86,15 @@ export async function interrupt(state) {
   }
 }
 
+export async function motd(motd) {
+  if (typeof srv !== 'undefined') await srv.fetch();
+  if (typeof srv == 'undefined') await load();
+
+  srv.motd = motd;
+  return await srv_info();
+}
+
+
+
 
 // Exit python
-// it should do lol
