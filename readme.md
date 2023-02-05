@@ -1,7 +1,6 @@
 
 # Discord Aternos Bot
 A simple discord bot made to turn your aternos server on/off and also see your server stats.
-
 <br>
 
 ## Commands
